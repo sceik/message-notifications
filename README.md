@@ -5,7 +5,7 @@ Il progetto si compone di 3 elementi:
 - RabbitMQ: usato per smistare le notifiche ai service
 - Service: Servizio che si occupa di prendere i messaggi accodati e processarli
 
-###Api
+### Api
 Espongono un servizio in ascolto sulla porta 5000, questo servizio espone la risorsa `/message`.
 
 Tecnologia usata:
@@ -13,7 +13,7 @@ Tecnologia usata:
 - [Flask](http://flask.pocoo.org/)
 - [Swagger](http://swagger.io/)
 
-###RabbitMQ
+### RabbitMQ
 Immagine docker ufficiale docker di rabbitMQ. Una volta avviata e' disponibile all'indirizzo [http://localhost:15672/#/](http://localhost:15672/)
 ###Service
 Contiene il servizio core che si occupa di interaggire con il Database.
