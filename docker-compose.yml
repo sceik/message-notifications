@@ -1,0 +1,32 @@
+version: '2'
+
+services:
+  api:
+    build: ./api/
+    restart: always
+    volumes:
+      - ./api:/app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - rabbit
+    links:
+      - "rabbit"
+
+  service:
+    build: ./service/
+    restart: always
+    volumes:
+      - ./service:/service
+    depends_on:
+      - rabbit
+    links:
+      - "rabbit"
+    
+  rabbit:
+    #docker run -d --hostname my-rabbit -p 15672:15672 -p 5672:5672 rabbitmq:3-management
+    image: rabbitmq:3-management
+    ports:
+      - 15672:15672 
+      - 5672:5672
+    restart: always
