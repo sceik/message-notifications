@@ -9,12 +9,11 @@ Il progetto si compone di 3 elementi:
 Espongono un servizio in ascolto sulla porta 5000, questo servizio espone la risorsa `/message`.
 
 Tecnologia usata:
-
 - [Flask](http://flask.pocoo.org/)
 - [Swagger](http://swagger.io/)
 
 ### RabbitMQ
-Immagine docker ufficiale docker di rabbitMQ. Una volta avviata e' disponibile all'indirizzo [http://localhost:15672/#/](http://localhost:15672/)
+Immagine docker ufficiale di rabbitMQ. Una volta avviata e' disponibile all'indirizzo [http://localhost:15672/#/](http://localhost:15672/)
 
 ### Service
 Contiene il servizio core che si occupa di interaggire con il Database.
